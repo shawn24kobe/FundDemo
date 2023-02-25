@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FundDemo.Dtos.FundWeightDto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SEDOL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumShares)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_BPL_MARKET)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price_USD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FundValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FundWeight)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SEDOL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumShares)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_BPL_MARKET)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price_USD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FundValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FundWeight)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

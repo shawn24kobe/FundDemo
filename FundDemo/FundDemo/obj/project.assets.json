@@ -6683,11 +6683,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\backend\\FundDemo\\FundDemo\\FundDemo.csproj",
+      "projectUniqueName": "D:\\Study\\demo\\FundDemo\\FundDemo\\FundDemo\\FundDemo.csproj",
       "projectName": "FundDemo",
-      "projectPath": "D:\\Study\\backend\\FundDemo\\FundDemo\\FundDemo.csproj",
+      "projectPath": "D:\\Study\\demo\\FundDemo\\FundDemo\\FundDemo\\FundDemo.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\backend\\FundDemo\\FundDemo\\obj\\",
+      "outputPath": "D:\\Study\\demo\\FundDemo\\FundDemo\\FundDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

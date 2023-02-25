@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = FundDemo
-build_property.ProjectDir = D:\Study\backend\FundDemo\FundDemo\
+build_property.ProjectDir = D:\Study\demo\FundDemo\FundDemo\FundDemo\

@@ -22,7 +22,7 @@ namespace FundDemo.Services.Repository
 
         public async Task<List<FundWeightDto>> GetFundWeight()
         {
-            string selectSql = @"select f.SEDOL,f.NumShares,p.ID_BPL_MARKET,p.[Price USD], (f.NumShares*p.[Price USD]) as fundValue into #temp1
+            string selectSql = @"select f.SEDOL,f.NumShares,p.ID_BPL_MARKET,p.[Price USD] AS Price_USD, (f.NumShares*p.[Price USD]) as fundValue into #temp1
                                 FROM [dbo].[fund_data] f INNER JOIN [dbo].[identifiers] i ON f.SEDOL=i.SEDOL INNER JOIN [dbo].[prices] p ON i.ID_BPL_MARKET=p.ID_BPL_MARKET
 	                            select #temp1.*,(case when a.totalVal=0 then 0 else isnull(cast( #temp1.fundValue /a.totalVal*100 as decimal(18,4)),0) end) as fundWeight  from #temp1
 	                            left join (select sum(fundValue) as totalVal from  #temp1) a on 1=1 order by fundWeight desc

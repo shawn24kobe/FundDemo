@@ -26,7 +26,7 @@ namespace FundDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            DataBaseConfig.GetDbConnStr(Configuration["ConnectionStrings:DefaultConnection"] + " Password=Abcd@1234;");
+            DataBaseConfig.GetDbConnStr(Configuration["ConnectionStrings:DefaultConnection"]);
             services.AddTransient<IFundRepository, FundRepository>();
             services.AddControllersWithViews();
         }
